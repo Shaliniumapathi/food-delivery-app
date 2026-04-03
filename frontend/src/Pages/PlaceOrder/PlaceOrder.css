@@ -1,0 +1,113 @@
+/* Main container */
+.place-order {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    width: 80%;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+}
+
+/* LEFT SIDE (form) */
+.place-order-left {
+    flex: 1;
+    min-width: 320px;
+}
+
+/* Title */
+.place-order-left .title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Input fields */
+.place-order-left input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Focus effect */
+.place-order-left input:focus {
+    border-color: #ff6b00;
+    box-shadow: 0 0 5px rgba(255, 107, 0, 0.3);
+}
+
+/* Multiple fields (row) */
+.multi-fields {
+    display: flex;
+    gap: 15px;
+}
+
+/* RIGHT SIDE (summary) */
+.place-order-right {
+    flex: 1;
+    min-width: 320px;
+}
+
+/* Reuse cart total styles */
+.cart-total {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Title */
+.cart-total h2 {
+    margin-bottom: 20px;
+}
+
+/* Rows */
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+/* Total highlight */
+.cart-total-details:last-child {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+}
+
+/* Button */
+.cart-total button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    background: #ff6b00;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover */
+.cart-total button:hover {
+    background: #e65c00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .place-order {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .multi-fields {
+        flex-direction: column;
+    }
+}

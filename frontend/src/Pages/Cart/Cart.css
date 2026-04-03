@@ -1,0 +1,214 @@
+/* Main cart container */
+.cart {
+    width: 80%;
+    margin: 50px auto;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Cart items box */
+.cart-items {
+    width: 100%;
+}
+
+/* Header row */
+.cart-tems-title {
+    display: grid;
+    grid-template-columns: 80px 1.5fr 1fr 1fr 1fr 80px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Each cart item row */
+.cart-items-item {
+    display: grid;
+    grid-template-columns: 80px 1.5fr 1fr 1fr 1fr 80px;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Food image */
+.cart-items-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Text styles */
+.cart-items-item p {
+    font-size: 14px;
+}
+
+/* Remove button */
+.cart-items-item p:last-child {
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cart-items-item p:last-child:hover {
+    color: darkred;
+    transform: scale(1.1);
+}
+
+/* Divider */
+hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive (mobile) */
+@media (max-width: 768px) {
+    .cart {
+        width: 95%;
+    }
+
+    /* Keep header visible but smaller */
+    .cart-tems-title {
+        display: grid;
+        grid-template-columns: 60px 1fr 1fr 1fr 1fr 60px;
+        font-size: 12px;
+    }
+
+    /* Keep horizontal layout */
+    .cart-items-item {
+        grid-template-columns: 60px 1fr 1fr 1fr 1fr 60px;
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    /* Smaller image */
+    .cart-items-item img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Bottom container */
+.cart-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Cart total box */
+.cart-total {
+    flex: 1;
+    min-width: 300px;
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Title */
+.cart-total h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* Each row (subtotal, delivery, total) */
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+/* Highlight total */
+.cart-total-details:last-child {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+}
+
+/* Checkout button */
+.cart-total button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    background: #ff6b00;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cart-total button:hover {
+    background: #e65c00;
+}
+
+/* Promo code section */
+.cart-promocode {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Promo text */
+.cart-promocode p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Input + button container */
+.cart-promocode-input {
+    display: flex;
+    gap: 10px;
+}
+
+/* Input field */
+.cart-promocode-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Submit button */
+.cart-promocode-input button {
+    padding: 10px 15px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cart-promocode-input button:hover {
+    background: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cart-bottom {
+        flex-direction: column;
+    }
+}

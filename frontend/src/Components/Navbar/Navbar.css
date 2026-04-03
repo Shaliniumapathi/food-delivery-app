@@ -1,0 +1,194 @@
+/* Navbar */
+.navbar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  box-sizing: border-box;   /* IMPORTANT */
+  background: #ffffff;
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.08); */
+}
+
+/* Logo */
+.logo{
+  width: 160px;
+}
+
+/* Menu */
+.navbar-menu{
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Right Section */
+.navbar-right{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.navbar-profile-dropdown {
+  position: relative;
+}
+
+.profile-btn {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid #ec7d33;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.profile-menu {
+  position: absolute;
+  right: 0;
+  top: 44px;
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  z-index: 10002;
+  min-width: 150px;
+  overflow: hidden;
+}
+
+.profile-menu button {
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 10px 14px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.profile-menu button:hover {
+  background: #e28904be;
+}
+
+/* Basket icon */
+.navbar-search-icon{
+  position: relative;
+}
+
+/* Sign in button */
+.navbar-right button{
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: #ec7d33;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+.navbar .active{
+    padding-bottom:2px;
+    border-bottom: 3px solid #ec7f26;
+
+}
+.navbar li{
+    cursor:pointer;
+}
+.navbar-search-icon{
+    position:relative;
+}
+.navbar-search-icon .dot{
+    position:absolute;
+    min-width:10px;
+    min-height:10px;
+    background-color: rgb(243, 120, 49);
+    border-radius:50%;
+    top:-5px;
+    right:-5px; 
+
+}
+
+@media (max-width: 1050px) {
+  .navbar-logo{
+    width:140px;
+  }
+  .navbar-menu{
+    gap:20px;
+    font-size:17px;
+  }
+  .navbar-right{
+    gap:30px;
+  }
+  .navbar-right img{
+    width:22px;
+  }
+  .navbar-right button{
+    padding:8px 25px;
+
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar-logo{
+    width:120px;
+  }
+  .navbar-menu{
+    gap:15px;
+    font-size:16px;
+  }
+  .navbar-right{
+    gap:20px;
+  }
+  .navbar-right img{
+    width:20px;
+  }
+  .navbar-right button{
+    padding:7px 20px;
+    font-size:15px;
+  }
+}
+
+/* Mobile menu icon */
+.mobile-menu-icon{
+  display:none;
+  cursor:pointer;
+  z-index:1001;
+}
+
+/* Mobile layout */
+@media (max-width:700px){
+
+.navbar{
+  position:relative;
+}
+
+/* Show hamburger */
+.mobile-menu-icon{
+  display:block;
+}
+
+/* Menu dropdown */
+.navbar-menu{
+  position:absolute;
+  top:60px;
+  right:20px;          /* move to right corner */
+  width:180px;
+  background:#fff;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:15px;
+  padding:15px 20px;
+  display:none;
+  border-radius:10px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+  z-index:1000;        /* ensures it appears above banner */
+}
+
+/* Show when active */
+.navbar-menu.active-menu{
+  display:flex;
+}
+
+}

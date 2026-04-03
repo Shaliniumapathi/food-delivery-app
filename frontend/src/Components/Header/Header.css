@@ -1,0 +1,75 @@
+
+.header{
+    min-height: clamp(320px, 44vw, 480px);
+    border-radius:20px;
+    background-image:  url('/public/assets/Images/Banner-3.jpg');
+    background-size: cover;
+    background-position: center;
+    position:relative;
+    overflow:hidden;
+}
+
+.header-content{
+   position:absolute;
+   display: flex;
+   flex-direction: column; 
+   align-items: flex-start;
+   gap: 1rem;
+   bottom: clamp(1rem, 2.5vw, 2.5rem);
+   left: clamp(1rem, 4vw, 2.5rem);
+   right: clamp(1rem, 4vw, 5rem);
+   max-width: min(420px, 85%);
+   animation: fadeIn 1.6s ease;
+}
+
+.header-content h2{
+    font-weight: 600;
+    color:white;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom:0;
+}
+.header-content p{
+    color:white;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    line-height: 1.6;
+}
+
+.header-content button{
+    border:none;
+    color:#303030;
+    font-weight:500;
+    border-radius: 30px;
+    background-color: #ffffff;
+    font-size:16px;
+    cursor: pointer;
+    padding: 0.85rem 2.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.header-content button:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+@media (max-width:900px){
+  .header{
+    min-height: 360px;
+  }
+  .header-content{
+    right: clamp(1rem, 4vw, 1rem);
+    max-width: 90%;
+  }
+}
+
+@media (max-width:600px){
+  .header-content{
+    bottom: 1rem;
+  }
+  .header-content p{
+    display:block;
+  }
+  .header-content button{
+    width: 100%;
+    text-align: center;
+    padding: 0.95rem 0;
+  }
+}

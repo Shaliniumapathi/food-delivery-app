@@ -1,0 +1,124 @@
+/* Logo */
+.footer-logo{
+  width: 160px;
+}
+
+.footer{
+    color:white;
+    background-color:#3b3a3a;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    padding: clamp(2rem, 3vw, 4rem);
+}
+.footer-content{
+    width:100%;
+    max-width: 1000px;
+    display:grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap:30px;
+}
+.footer-content-left , .footer-content-right, .footer-content-center{
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    gap:20px;
+}
+.footer-content-left li,
+.footer-content-right li,
+.footer-content-center li{
+    list-style: none;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Orange arrow */
+.footer-content-left li::before,
+.footer-content-right li::before,
+.footer-content-center li::before{
+    content: ">";
+    color: orange;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.footer-content-left li:hover,
+.footer-content-right li:hover,
+.footer-content-center li:hover{
+    color: #ee811b;
+    transform: translateX(5px);
+}
+
+/* Arrow animation on hover */
+.footer-content-left li:hover::before,
+.footer-content-right li:hover::before,
+.footer-content-center li:hover::before{
+    color: darkorange;
+}
+ .footer-content-right h2, .footer-content-center h2{
+    list-style:none;
+    margin-bottom:10px
+}
+.footer-social-icons{
+    display: flex;
+    justify-content: center;   /* center icons */
+    align-items: center;
+    gap: 18px;                 /* space between icons */
+    margin-top: 20px;
+}
+.footer-social-icons svg:hover{
+    color: #ee811b;            /* change color on hover */
+    transform: scale(1.2);     /* slightly increase size */
+}
+.copy-right{
+    margin:auto;
+}
+
+.hr{
+    grid-column:1/-1;
+    border:none;
+    height:1px;
+    background:#8f8989;
+    /* margin-top:10px; */
+}
+
+@media (max-width: 900px){
+  .footer-content{
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .footer-content-left,
+  .footer-content-center,
+  .footer-content-right{
+    align-items:center;
+    text-align:center;
+  }
+  .footer-content-left p{
+    text-align:center;
+  }
+  .footer-content-left .footer-logo{
+    width: 140px;
+  }
+  .footer-social-icons{
+    gap: 12px;
+  }
+}
+
+@media (max-width: 520px){
+  .footer{
+    padding: 2rem 1rem;
+  }
+  .footer-content{
+    gap: 16px;
+  }
+}
+
+
+
+

@@ -1,0 +1,114 @@
+/* Main container */
+.add {
+  width: 100%;
+  padding: 30px;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+/* Form layout */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Form box */
+.add form {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Image upload section */
+.add-img-upload img {
+  width: 120px;
+  height: 120px;
+  border: 2px dashed #d1d5db;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.add-img-upload img:hover {
+  border-color: #f97316;
+}
+
+/* Hide file input */
+.add-img-upload input {
+  display: none;
+}
+
+/* Inputs & textarea */
+.add input,
+.add textarea,
+.add select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+/* Focus effect */
+.add input:focus,
+.add textarea:focus,
+.add select:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2);
+}
+
+/* Category + price row */
+.add-category-price {
+  display: flex;
+  gap: 20px;
+}
+
+/* Half width */
+.add-category,
+.add-price {
+  flex: 1;
+}
+
+/* Button */
+.add-btn {
+  margin-top: 10px;
+  padding: 12px;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Button hover */
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(249, 115, 22, 0.3);
+}
+
+/* Labels */
+.add p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .add form {
+    padding: 15px;
+  }
+
+  .add-category-price {
+    flex-direction: column;
+  }
+}

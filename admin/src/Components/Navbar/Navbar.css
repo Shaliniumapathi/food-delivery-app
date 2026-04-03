@@ -1,0 +1,33 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff; /* dark admin theme */
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.logo {
+  width: 140px;
+  cursor: pointer;
+}
+
+/* Profile image */
+.profile {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid #f97316; /* orange border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for profile */
+.profile:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #f97316;
+}
